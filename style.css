@@ -18,12 +18,12 @@ body{
 hr {
     width: 200px;
     height: 2px;
-    background-color: deeppink;
+    background-color: #C200D8;
     border: 0;
     margin-bottom: 30px;
 }
 /* --- BASE STYLE --- */
-    /* title */
+/* title */
 h1{
     position: relative;
     top: 50px;
@@ -34,7 +34,7 @@ h1{
 h2{
     font-size: 2em;
 }
-    /* text */
+/* text */
 p{
     font-size: 1.2em;
     text-indent: 25px;
@@ -46,9 +46,9 @@ article{
 article p{
     text-align: justify;
 }
-    /* quote */
+/* quote */
 q{
-    color: deeppink;
+    color: #C200D8;
     font-size: 1.3em;
     margin: .5em 10px;
     padding: .5em 10px;
@@ -160,7 +160,7 @@ q:after{
     background-color: white;
     border-bottom-right-radius: 60%;
     border-top-right-radius: 10%;
-    box-shadow: inset 0px 0px 60px 10px rgba(255,0,0,1);
+    box-shadow: inset 0px 0px 60px 10px #C200D8;
     transform-origin: left center;
     overflow: hidden;
     transform: rotate(-180deg); 
@@ -177,7 +177,7 @@ q:after{
     border-top-right-radius: 10%;
 }
 .blade a:hover{
-    box-shadow: inset 0px 0px 60px 10px rgba(255,0,0,1);
+    box-shadow: inset 0px 0px 60px 10px #C200D8;
 }
 #MenuOpen:target .blade1{
     transform: rotate(0deg);
@@ -209,4 +209,7 @@ q:after{
 #MenuOpen:target .blade10{
     transform: rotate(324deg); 
 }
-
+#MenuOpen{
+    position: fixed;
+    z-index: 10;
+}
