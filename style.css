@@ -81,6 +81,7 @@ q:after{
     left: 20px;
     top: 100px;
     transition-duration: 500ms;
+    z-index: 10;
 }
 .menu *{
     transition-duration: 500ms;
@@ -119,18 +120,19 @@ q:after{
     left: 40px;
     top: 60px;
     border-radius: 50%;
+    border: solid 20px black;
     position: absolute;
-    background-color: black;
-    box-shadow: inset 0px 4px 40px 1px rgba(214,214,214,1),
-        0px 4px 10px 1px rgba(0,0,0,1);
+    box-shadow: inset 0px -14px 40px 1px rgba(214,214,214,1),
+        0px 4px 10px 1px rgba(100,100,100,1);
 }
 #MenuOpen:target .around{
-    width: 900px;
-    height: 900px;
+    width: 860px;
+    height: 860px;
     margin-left: -450px;
     margin-top: -450px;
 }
 .inter{
+    display: none;
     width: 0;
     height: 0;
     margin-left: 0;
@@ -167,6 +169,8 @@ q:after{
 .blade a{
     display: block;
     text-align: center;
+    text-decoration: none;
+    color: black;
     line-height: 70px;
     font-size: 25px;
     border-bottom-right-radius: 60%;
