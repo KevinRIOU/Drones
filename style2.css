@@ -1,0 +1,115 @@
+.body{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.menu{
+    position: fixed;
+    display: block;
+    width: 900px;
+    height: 900px;
+    left: 20px;
+    top: 200px;
+    transition-duration: 300ms;
+}/*Do not forget to change position and rotation when hover*/
+.center{
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
+    margin-top: -70px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: black;
+    box-shadow: inset 0px 4px 40px 1px rgba(214,214,214,1);
+}
+.center a{
+    display: block;
+    width:140px;
+    height:140px;
+}
+#MenuOpen:target .menu{
+    left: 400px;
+}
+.around{
+    width: 900px;
+    height: 900px;
+    margin-left: -450px;
+    margin-top: -450px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: black;
+    box-shadow: inset 0px 4px 40px 1px rgba(214,214,214,1),
+        0px 4px 10px 1px rgba(0,0,0,1);
+}
+.inter{
+    width: 860px;
+    height: 860px;
+    margin-left: -430px;
+    margin-top: -430px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: white;
+    box-shadow: inset 0px 4px 10px 1px rgba(0,0,0,1);
+}
+.blade{
+    width: 425px;
+    height: 70px;
+    margin-top: -35px;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: white;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 10%;
+    box-shadow: inset 0px 0px 60px 10px rgba(255,0,0,1);
+    transform-origin: left center;
+    overflow: hidden;
+}
+.blade a{
+    display: block;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 10%;
+    transition-duration: 300ms;
+}
+.blade a:hover{
+    box-shadow: inset 0px 0px 60px 10px rgba(255,0,0,1);
+}
+.blade1{
+    transform: rotate(0deg); 
+}
+.blade2{
+    transform: rotate(36deg); 
+}
+.blade3{
+    transform: rotate(72deg); 
+}
+.blade4{
+    transform: rotate(108deg); 
+}
+.blade5{
+    transform: rotate(144deg); 
+}
+.blade6{
+    transform: rotate(180deg); 
+}
+.blade7{
+    transform: rotate(216deg); 
+}
+.blade8{
+    transform: rotate(252deg); 
+}
+.blade9{
+    transform: rotate(288deg); 
+}
+.blade10{
+    transform: rotate(324deg); 
+}
