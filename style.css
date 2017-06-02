@@ -30,6 +30,8 @@ h1{
     text-align: center;
     font-size: 4em;
     font-weight: 100;
+    color: #C200D8;
+    text-decoration: underline;
 }
 h2{
     font-size: 2em;
@@ -73,6 +75,7 @@ q:after{
     width: 100%;
 }
 /* --- PROPELLER --- */
+/* Principal Bloc */
 .menu{
     position: fixed;
     display: block;
@@ -86,6 +89,7 @@ q:after{
 .menu *{
     transition-duration: 500ms;
 }
+/* Propeller */
 .center{
     width: 140px;
     height: 140px;
@@ -109,6 +113,8 @@ q:after{
 #MenuOpen:target .open{
     display: none;
 }
+
+
 #MenuOpen:target .menu{
     top: 200px;
 }
@@ -150,6 +156,7 @@ q:after{
     margin-left: -430px;
     margin-top: -430px;
 }
+/* All Blade */
 .blade{
     width: 425px;
     height: 70px;
@@ -212,4 +219,18 @@ q:after{
 #MenuOpen{
     position: fixed;
     z-index: 10;
+}
+/* icon */
+.center a:first-child span{
+    width: 50px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    position: relative;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+.center a span:first-child{
+    margin-top: 45px;
 }
