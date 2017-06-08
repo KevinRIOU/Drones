@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Drones | Race</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/hybrid.css">
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+    
+<body>
+    <div id="MenuNext">
+        <div id="MenuOpen">
+            <nav class="menu">
+                   <div class="around"></div>
+                   <div class="inter"></div>
+                   <div class="blade blade7"><a href="image/Maquetting.png">Pattern</a></div>
+                   <div class="blade blade8"><a href="https://github.com/KevinRIOU/Drones">GitHub</a></div>
+                   <div class="blade blade9"><a href="code.html">Code</a></div>
+                   <div class="blade blade10"><a href="home.html">Home</a></div>
+                   <div class="blade blade1"><a href="personnal.html">Personnal</a></div>
+                   <div class="blade blade2"><a href="race.html">Racing</a></div>
+                   <div class="blade blade3"><a href="military.html">Military</a></div>
+                   <div class="blade blade4"><a></a></div>
+                   <div class="blade blade5"><a></a></div>
+                   <div class="blade blade6"><a></a></div>
+                <div class="center"><div class="alla">
+                    <a class="open" href="#MenuOpen"><img src="image/open.png"></a>
+                    <a class="next" href="#MenuNext"><img src="image/next.png"></a>
+                    <a class="close" href="#MenuClose"><img src="image/close.png"></a>
+                    </div></div>
+             </nav>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Drones</h1>
+        <img class="banner" src="image/code.jpg" alt="banner">
+        <section>
+            <article>
+                <hr>
+                <h2>Navigation</h2>
+                <pre><code class="html">
+&lt;div id="MenuOpen">
+    &lt;nav class="menu">
+           &lt;div class="around">&lt;/div>
+           &lt;div class="blade blade7">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="blade blade8">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="blade blade9">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="blade blade10">&lt;a href="home.html">Home&lt;/a>&lt;/div>
+           &lt;div class="blade blade1">&lt;a href="personnal.html">Personnal&lt;/a>&lt;/div>
+           &lt;div class="blade blade2">&lt;a href="race.html">Racing&lt;/a>&lt;/div>
+           &lt;div class="blade blade3">&lt;a href="military.html">Military&lt;/a>&lt;/div>
+           &lt;div class="blade blade4">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="blade blade5">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="blade blade6">&lt;a>&lt;/a>&lt;/div>
+           &lt;div class="center">&lt;a class="open" href="#MenuOpen">
+                &lt;span>&lt;/span>
+                &lt;span>&lt;/span>
+                &lt;span>&lt;/span>
+           &lt;/a>&lt;a class="close" href="#MenuClose">&lt;/a>&lt;/div>
+     &lt;/nav>
+&lt;/div>
+                </code></pre> 
+                
+                <h3>Navigation container</h3>
+                <pre><code class="css">
+.menu{
+    position: fixed;
+    display: block;
+    width: 900px;
+    height: 900px;
+    left: 20px;
+    top: 100px;
+    transition-duration: 500ms;
+    z-index: 10;
+}
+.menu *{
+    transition-duration: 500ms;
+}
+                </code></pre>
+                <pre><code class="css">
+#MenuOpen:target .menu{
+    top: 200px;
+}
+                </code></pre>
+                
+                <h3>Button and center of Navigation</h3>
+                <pre><code class="css">
+.center{
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
+    margin-top: -70px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: black;
+    box-shadow: inset 0px 4px 40px 1px rgba(214,214,214,1);
+}
+.center a{
+    display: block;
+    width:140px;
+    height:140px;
+}
+.center a:first-child span{
+    width: 50px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    position: relative;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+.center a span:first-child{
+    margin-top: 45px;
+}
+                </code></pre>
+                <pre><code class="css">
+#MenuOpen:target .close{
+    display: inherit;
+}
+#MenuOpen:target .open{
+    display: none;
+}
+                </code></pre>
+                
+                <h3>Circle around blade</h3>
+                <pre><code class="css">
+.around{
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    margin-top: 0;
+    left: 40px;
+    top: 60px;
+    border-radius: 50%;
+    border: solid 20px black;
+    position: absolute;
+    box-shadow: inset 0px -14px 40px 1px rgba(214,214,214,1),
+        0px 4px 10px 1px rgba(100,100,100,1);
+}
+                </code></pre>
+                <pre><code class="css">
+#MenuOpen:target .around{
+    width: 860px;
+    height: 860px;
+    margin-left: -450px;
+    margin-top: -450px;
+}
+                </code></pre>
+                
+                <h3>All blade</h3>
+                <pre><code class="css">
+.blade{
+    width: 425px;
+    height: 70px;
+    margin-top: -35px;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    background-color: white;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 10%;
+    box-shadow: inset 0px 0px 60px 10px #C200D8;
+    transform-origin: left center;
+    overflow: hidden;
+    transform: rotate(-180deg); 
+    transition-delay: 200ms;
+}
+.blade a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 70px;
+    font-size: 25px;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 10%;
+}
+                </code></pre>
+                <pre><code class="css">
+#MenuOpen:target .blade1{
+    transform: rotate(0deg);
+}
+#MenuOpen:target .blade2{
+    transform: rotate(36deg); 
+}
+#MenuOpen:target .blade3{
+    transform: rotate(72deg);
+}
+#MenuOpen:target .blade4{
+    transform: rotate(108deg); 
+}
+#MenuOpen:target .blade5{
+    transform: rotate(144deg);
+}
+#MenuOpen:target .blade6{
+    transform: rotate(180deg); 
+}
+#MenuOpen:target .blade7{
+    transform: rotate(216deg); 
+}
+#MenuOpen:target .blade8{
+    transform: rotate(252deg); 
+}
+#MenuOpen:target .blade9{
+    transform: rotate(288deg);
+}
+#MenuOpen:target .blade10{
+    transform: rotate(324deg); 
+}
+                </code></pre>
+                <pre><code class="css">
+.blade a:hover{
+    box-shadow: inset 0px 0px 60px 10px #C200D8;
+}
+                </code></pre>
+                <br>
+                <br>
+                <hr>
+                <h2>Content section</h2>
+                <pre><code class="html">
+&lt;div class="main">
+    &lt;h1>Drones&lt;/h1>
+    &lt;img class="banner" src="image/personnal.jpg" alt="banner">
+    &lt;section>
+        &lt;article>
+            &lt;h2>Personnal Drones&lt;/h2>
+            &lt;hr>
+            &lt;h3>Regulations&lt;/h3>
+            &lt;p>Today, many regulations are applied to person who use drones for personnal use : first if they are within 5 miles of an Airport they need to cantact the control tower, next if they use drones for commercial purpose it's illegal. this two rules are the principaly rules applied today on Drones.&lt;/p>
+            &lt;h3>Evolution&lt;/h3>
+            &lt;p>Drones evolve all days, Airbus is working on monoplace or dualplace flying car, it can be consider as a drone because it work like it. As you can see below the car is very big and it look impossiblke to create but it's in work. &lt;/p>
+        &lt;/article>
+    &lt;/section>
+    &lt;img class="banner" src="image/airbus.jpg" alt="banner">
+&lt;/div>
+                </code></pre>
+                <pre><code class="css">
+.main{
+    position: absolute;
+    top: 0;
+    height: auto;
+    padding: 0 0 80px 0;
+    margin: 0 20%;
+    background-color: #eee;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+    font-family: calibri light, sans-serif;
+}
+                </code></pre>
+                <h3>Title</h3>
+                <pre><code class="css">
+h1{
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 100;
+    color: #C200D8;
+    text-decoration: underline;
+}
+h2{
+    font-size: 2em;
+}
+                </code></pre>
+                <h3>Content text</h3>
+                <pre><code class="css">
+p{
+    font-size: 1.2em;
+    text-indent: 25px;
+}
+article{
+    padding: 50px;
+    position: relative;
+}
+article p{
+    text-align: justify;
+}
+                </code></pre>
+                <h3>Picture</h3>
+                <pre><code class="css">
+.banner{
+    margin-top: 50px;
+    width: 100%;
+}
+                </code></pre>
+                <h3>Separation</h3>
+                <pre><code class="css">
+hr {
+    width: 200px;
+    height: 2px;
+    background-color: #C200D8;
+    border: 0;
+    margin-bottom: 30px;
+}
+                </code></pre>
+                <h3>Quote</h3>
+                <pre><code class="css">
+q{
+    color: #C200D8;
+    font-size: 1.3em;
+    margin: .5em 10px;
+    padding: .5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+q:before,
+q:after{
+    color: #555;
+    font-size: 4em;
+    margin: 0 .25em;
+    /*vertical-align: -.4em;*/
+}
+q:before{
+    content: open-quote;
+}
+q:after{
+    content: close-quote;
+}
+                </code></pre>
+            </article>
+        </section>
+    </div>
+</body>
